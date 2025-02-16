@@ -1,0 +1,47 @@
+[
+    {
+        "_id": 1,
+        "title": "Canon EOS Rebel T100",
+        "description": "Canon EOS Rebel T100 Digital SLR Camera with 18-55mm Lens Kit, 18 Megapixel Sensor, Wi-Fi, DIGIC4+, SanDisk 32GB Memory Card",
+        "price": 559.99,
+        "image": "https://i.ibb.co/1r28gMk/1.webp",
+        "category": "Electronics",
+        "ratings": 4.5
+    },
+    {
+        "_id": 2,
+        "title": "DJI Air",
+        "description": "DJI Mini 2 Fly More Combo - Ultralight Foldable Drone, 3-Axis Gimbal with 4K Camera, 12MP Photos, 31 Min Flight Time",
+        "price": 999.00,
+        "image": "https://i.ibb.co/qdfB3s6/2.webp",
+        "category": "Electronics",
+        "ratings": 4.8
+    },
+    {
+        "_id": 3,
+        "title": "Apple iPhone 13",
+        "description": "Apple iPhone 13 - 128GB, Super Retina XDR display, A15 Bionic chip, Dual camera system",
+        "price": 799.00,
+        "image": "https://www.eros.ae/media/catalog/product/cache/4d25cc2d7db4bdfe410479ebb1f61f20/t/r/tra-iphone13-pro-128gb-01_1.jpg",
+        "category": "Electronics",
+        "ratings": 4.6
+    },
+    {
+        "_id": 4,
+        "title": "MacBook Pro",
+        "description": "Apple MacBook Pro 13-inch - Apple M1 chip, 8GB RAM, 256GB SSD Storage.",
+        "price": 1299.00,
+        "image": "https://www.skyland.com.bd/image/catalog/myda2-1.jpg",
+        "category": "Electronics",
+        "ratings": 4.7
+    },
+    {
+        "_id": 5,
+        "title": "Sony WH-1000XM4",
+        "description": "Sony WH-1000XM4 Wireless Noise Cancelling Overhead Headphones, 30-Hour Battery Life.",
+        "price": 348.00,
+        "image": "https://m.media-amazon.com/images/I/71ARBeyX02L._AC_SX466_.jpg",
+        "category": "Electronics",
+        "ratings": 4.8
+    }
+]

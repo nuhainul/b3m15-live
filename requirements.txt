@@ -1,0 +1,20 @@
+# Enhanced Shopping Cart Application
+
+This is an enhanced shopping cart application built using HTML, CSS, and vanilla JavaScript. The application allows users to view products, add them to a cart, apply promo codes for discounts, and proceed to checkout.
+
+## Features
+
+- Dynamic product listing from an API
+- Add products to the shopping cart
+- View items in the cart with the ability to increase quantity
+- Apply promo codes for discounts
+- Calculate and display subtotals, discounts, and final totals
+- Responsive design for mobile and desktop views
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript (vanilla)
+- Fetch API for data retrieval
+

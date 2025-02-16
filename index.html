@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Shopping Cart Application</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Updated path -->
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <div class="cart-info">
+            <span id="cart-count">0</span> items in cart
+        </div>
+    </header>
+    
+    <main>
+        <section id="product-container" class="product-container">
+            <!-- Products will be dynamically loaded here -->
+        </section>
+        
+        <aside id="cart" class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </ul>
+            <div class="total">
+                Subtotal: $<span id="cart-subtotal">0.00</span><br>
+                Discount: $<span id="cart-discount">0.00</span><br>
+                Final Total: $<span id="cart-total">0.00</span>
+            </div>
+
+            <!-- Start of New Promo Code Section -->
+            <div>
+                <input type="text" id="promo-code" placeholder="Enter promo code" />
+                <button id="apply-promo">Apply</button>
+                <div id="promo-message"></div>
+            </div>
+            <!-- End of New Promo Code Section -->
+
+            <button id="checkout-button">Checkout</button>
+        </aside>
+    </main>
+
+    <script src="main.js"></script> <!-- Updated path -->
+</body>
+</html>
