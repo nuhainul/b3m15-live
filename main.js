@@ -1,20 +1,10 @@
 const cart = [];
-let appliedPromoCode = null;
-
-const promoCodes = {
-    'ostad10': 0.10, // 10% discount
-    'ostad5': 0.05   // 5% discount
-};
 
 const productContainer = document.getElementById('product-container');
 const cartCountElement = document.getElementById('cart-count');
 const cartTotalElement = document.getElementById('cart-total');
 const cartSubtotalElement = document.getElementById('cart-subtotal');
-const cartDiscountElement = document.getElementById('cart-discount');
 const cartItemsElement = document.getElementById('cart-items');
-const applyPromoButton = document.getElementById('apply-promo');
-const promoCodeInput = document.getElementById('promo-code');
-const promoMessage = document.getElementById('promo-message');
 
 // Fetch products from the API
 async function fetchProducts() {
@@ -50,8 +40,8 @@ function attachAddToCartHandlers(products) {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            const productId = e.target.dataset.id;
-            const product = products.find(item => item.id == productId);
+            const productId = parseInt(e.target.dataset.id); // Ensure to match ID types
+            const product = products.find(item => item.id === productId);
             addToCart(product);
             updateCart();
         });
@@ -75,15 +65,11 @@ function updateCart() {
     displayCartItems();
 }
 
-// Calculate the totals: subtotal, discount, and final total
+// Calculate the totals: subtotal and final total
 function calculateTotal() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const discount = appliedPromoCode ? subtotal * promoCodes[appliedPromoCode] : 0;
-    const total = subtotal - discount;
-
     cartSubtotalElement.textContent = subtotal.toFixed(2);
-    cartDiscountElement.textContent = discount.toFixed(2);
-    cartTotalElement.textContent = total.toFixed(2);
+    cartTotalElement.textContent = subtotal.toFixed(2); // Final total same as subtotal
 }
 
 // Display cart items to the UI
@@ -91,4 +77,10 @@ function displayCartItems() {
     cartItemsElement.innerHTML = ''; // Clear previous items
     cart.forEach(item => {
         const cartItem = document.createElement('li');
-        cartItem.textContent
+        cartItem.textContent = `${item.title} - $${item.price} x ${item.quantity}`;
+        cartItemsElement.appendChild(cartItem);
+    });
+}
+
+// Initial fetch of products on page load
+fetchProducts();
